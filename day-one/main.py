@@ -1,7 +1,7 @@
 list_one = []
 list_two = []
 
-def parse_lists(filename = "data.txt"):
+def parse_lists(filename):
     with open(filename, "r") as file:
         for line in file:
             parts = line.strip().split()
@@ -34,6 +34,7 @@ def compare_lists(list_one, list_two):
         elif list_one[i] < list_two[i]:
             distance = list_two[i] - list_one[i]
             total += distance
+
     return total
 
 def main():
